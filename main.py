@@ -16,8 +16,8 @@ class RosThread(QThread):
 
     def __init__(self):
         QThread.__init__(self)
-        self.ros = roslibpy.Ros(host='localhost', port=9090)
-        self.camera_topic = roslibpy.Topic(self.ros, name='/camera/image_raw/compressed',
+        self.ros = roslibpy.Ros(host='192.168.1.164', port=9090)
+        self.camera_topic = roslibpy.Topic(self.ros, name='/camera/color/image_raw/compressed',
                                       message_type='sensor_msgs/CompressedImage')
         self.camera_topic.subscribe(self.image_cb)
         self.ros.on_ready(self.connected_cb)

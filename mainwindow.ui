@@ -16,14 +16,47 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QLabel" name="label_x">
+       <property name="text">
+        <string>x</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_x"/>
+      <widget class="QLabel" name="label_y">
+       <property name="text">
+        <string>y</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_y"/>
+      <widget class="QPushButton" name="pushButton_go">
+       <property name="text">
+        <string>go</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_cancel">
+       <property name="text">
+        <string>cancel</string>
+       </property>
+      </widget>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -33,15 +66,9 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>33</height>
+     <height>30</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>吃饭</string>
-    </property>
-   </widget>
-   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

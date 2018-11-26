@@ -65,7 +65,7 @@ class RosThread(QThread):
         goal.on('feedback', lambda feedback:
                 self.text_signal.emit(str(goal.status) + str(feedback))
                 )
-        goal.on('result', lambda result: self.text_signal.emit("到了"))
+        goal.on('result', lambda result: self.text_signal.emit((str(goal.status) + str(goal.feedback)+"到了")))
 
         # goal.on('timeout', lambda: self.text_signal.emit("TimeOut"))
 
